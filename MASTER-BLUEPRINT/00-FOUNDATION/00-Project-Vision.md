@@ -1,199 +1,97 @@
-# Project Vision
+00-Project-Vision.md
 
 Estado: Aprobado
-
 Versión: 1.0
-
 Última actualización: Junio 2026
-
 Autor: SistematizArg Engineering Team
 
----
+Objetivo
 
-# Objetivo
+Definir la visión fundacional de SistematizArg como empresa.
 
-Definir la visión oficial del proyecto Muggi.
+Este documento establece la razón de existencia de la organización, el problema general que aborda en el mercado y el tipo de impacto que busca generar a largo plazo.
 
-Este documento establece el propósito del producto, el tipo de plataforma que se desea construir y las reglas generales que deberán respetarse durante todo el desarrollo.
+Su contenido es la base conceptual de todo el sistema documental.
 
-Su contenido tiene prioridad sobre cualquier decisión técnica posterior.
+Alcance
 
----
+Este documento aplica a toda la organización:
 
-# Alcance
+Dirección
+Ingeniería
+Diseño
+Producto
+Marketing
+Operaciones
+Inteligencias Artificiales utilizadas dentro del sistema de desarrollo
+¿Por qué existe SistematizArg?
 
-Este documento aplica a todos los integrantes del proyecto:
+SistematizArg existe para reducir la complejidad con la que pequeñas y medianas empresas adoptan tecnología.
 
-- Dirección
-- Desarrollo
-- Diseño
-- Marketing
-- Soporte
-- Inteligencias Artificiales utilizadas durante el desarrollo
+Actualmente, la digitalización de negocios requiere múltiples proveedores, herramientas desconectadas y procesos fragmentados que incrementan costos, tiempos de implementación y dificultad operativa.
 
----
+La empresa surge como respuesta a este problema estructural del ecosistema digital.
 
-# ¿Qué es Muggi?
+Problema general que abordamos
 
-Muggi es una plataforma orientada a pequeñas y medianas empresas que permite obtener una solución digital completa desde un único lugar.
+Las PyMEs y profesionales independientes enfrentan barreras recurrentes al intentar digitalizar sus operaciones:
 
-La plataforma permitirá:
+Fragmentación de servicios tecnológicos.
+Dependencia de múltiples proveedores.
+Altos costos de implementación inicial.
+Falta de integración entre herramientas.
+Dificultad para escalar soluciones existentes.
+Complejidad técnica fuera de su alcance operativo.
 
-- descubrir soluciones por rubro;
-- adquirir plantillas profesionales;
-- personalizar proyectos existentes;
-- solicitar desarrollos personalizados;
-- desplegar proyectos;
-- administrar servicios contratados;
-- incorporar nuevas funcionalidades mediante módulos.
+Esto genera un entorno donde la adopción tecnológica es lenta, costosa y poco sostenible.
 
-Muggi no es únicamente un Marketplace.
+Enfoque de la empresa
 
-Es una plataforma para crear y administrar negocios digitales.
+SistematizArg aborda este problema mediante la construcción de sistemas digitales integrados que unifican capacidades tecnológicas en entornos accesibles, escalables y mantenibles.
 
----
+El enfoque no es reemplazar herramientas existentes, sino reducir la fricción entre ellas o integrarlas dentro de estructuras coherentes cuando sea necesario.
 
-# Público objetivo
+Principio rector
 
-Durante las primeras etapas el proyecto estará enfocado exclusivamente en:
+La tecnología debe reducir complejidad operativa, no aumentarla.
 
-- Profesionales independientes.
-- Comercios.
-- Prestadores de servicios.
-- Emprendedores.
-- PyMEs.
+Toda decisión estratégica, técnica o de producto debe evaluarse en función de este principio.
 
-No se diseñará inicialmente para grandes corporaciones.
+Alcance de la empresa
 
----
+SistematizArg desarrolla:
 
-# Problema que buscamos resolver
+Sistemas digitales para negocios.
+Plataformas modulares.
+Herramientas de automatización.
+Infraestructura de soporte para productos digitales.
 
-Actualmente una pequeña empresa necesita contratar múltiples proveedores para construir su presencia digital.
+Y puede integrar o interoperar con herramientas externas cuando sea necesario para cumplir su objetivo principal.
 
-Ejemplo:
+Límites explícitos
 
-- diseñador
-- programador
-- hosting
-- dominio
-- mantenimiento
-- SEO
-- automatizaciones
-- community manager
+SistematizArg no existe para:
 
-Esto genera altos costos, tiempos largos y soluciones poco integradas.
+Construir soluciones aisladas sin visión de sistema.
+Depender estructuralmente de un único proveedor externo.
+Reproducir herramientas existentes sin valor agregado sistémico.
+Ofrecer soluciones no escalables o difíciles de mantener.
+Relación con productos
 
-Muggi busca centralizar estos servicios dentro de una única plataforma.
+Los productos desarrollados por la empresa son implementaciones de esta visión, no el origen de la misma.
 
----
+Cada producto debe alinearse con el objetivo general de reducir complejidad en la adopción tecnológica.
 
-# Nuestra propuesta
+Criterios de coherencia
 
-El cliente deberá poder comenzar de la forma que le resulte más conveniente.
+Cualquier iniciativa dentro de la empresa debe cumplir:
 
-Ejemplos:
+Reducir o simplificar procesos existentes.
+Mantener consistencia con el principio rector.
+Integrarse dentro de un sistema mayor.
+Evitar fragmentación funcional innecesaria.
+Conclusión
 
-- Comprar una plantilla.
-- Solicitar una personalización.
-- Contratar un desarrollo completo.
-- Crear un proyecto mediante IA.
+SistematizArg es una empresa orientada a construir sistemas tecnológicos coherentes para la digitalización de negocios pequeños y medianos.
 
-Todos estos caminos deberán conducir a la misma plataforma.
-
----
-
-# Visión de largo plazo
-
-Muggi evolucionará de forma gradual.
-
-Etapa 1
-
-Marketplace de soluciones digitales.
-
-Etapa 2
-
-Constructor inteligente basado en IA.
-
-Etapa 3
-
-Sistema modular de ampliaciones.
-
-Etapa 4
-
-Plataforma completa de administración empresarial.
-
-Cada etapa deberá construirse sobre la anterior.
-
-No se reemplazarán funcionalidades.
-
-Se ampliarán.
-
----
-
-# Principios
-
-Todo desarrollo deberá cumplir los siguientes principios.
-
-## Modularidad
-
-Cada funcionalidad deberá ser independiente.
-
----
-
-## Reutilización
-
-No se implementará dos veces la misma solución.
-
----
-
-## Escalabilidad
-
-Las decisiones deberán permitir el crecimiento continuo del producto.
-
----
-
-## Simplicidad
-
-La solución más simple será la opción preferida siempre que cumpla los requisitos.
-
----
-
-## Calidad
-
-Todo módulo deberá estar documentado, probado y revisado antes de considerarse terminado.
-
----
-
-# Qué NO es Muggi
-
-Muggi no pretende competir con todas las plataformas existentes.
-
-No pretende reemplazar herramientas especializadas.
-
-Su objetivo es integrarlas cuando resulte conveniente y desarrollar soluciones propias cuando aporten un beneficio claro.
-
----
-
-# Criterios de aceptación
-
-Este documento se considerará vigente cuando todos los participantes del proyecto compartan la misma definición de:
-
-- qué es Muggi;
-- para quién existe;
-- qué problemas resuelve;
-- cómo evolucionará.
-
----
-
-# Notas para desarrolladores
-
-Antes de comenzar cualquier módulo deberán revisarse este documento y los principios definidos dentro de Foundation.
-
-Ningún desarrollo podrá contradecir la visión aquí establecida.
-
----
-
-# Próxima revisión
-
-Cuando finalice la documentación Foundation.
+Su identidad se define por su enfoque en la simplificación estructural, la integración de sistemas y la reducción de fricción tecnológica en el ecosistema empresarial.
