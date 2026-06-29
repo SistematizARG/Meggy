@@ -200,6 +200,116 @@ Modules
 Applications
 
 
+Import rules
+
+No se permite:
+
+imports cruzados entre dominios no relacionados
+imports directos entre módulos de alto nivel
+acceso directo a internals sin interfaces
+Versionado de dependencias
+
+Toda dependencia debe estar versionada:
+
+paquetes externos → SemVer
+módulos internos → SemVer
+eventos → versión explícita
+Resolución de dependencias
+
+El sistema debe soportar:
+
+resolución determinística
+resolución en tiempo de build
+validación en CI
+Inyección de dependencias
+
+Se promueve el uso de:
+
+Dependency Injection
+Service Registry
+Interface-based design
+
+Evitar:
+
+instanciación directa global
+singletons no controlados
+acoplamientos ocultos
+Dependencias en Event Bus
+
+Los eventos reemplazan dependencias directas cuando sea posible.
+
+Ejemplo:
+
+En lugar de:
+
+PaymentService → BillingService
+``` id="ex001"
+
+Se utiliza:
+
+
+PaymentProcessed event → BillingModule
+
+
+---
+
+# Dependencias en IA (Hugi)
+
+Hugi no debe tener dependencias directas sobre módulos críticos.
+
+Solo puede interactuar mediante:
+
+- Event Bus
+- Kernel API
+- Read-only System State
+
+---
+
+# Validación de dependencias
+
+Antes de merge:
+
+- detectar ciclos
+- validar acoplamiento
+- analizar impacto arquitectónico
+- verificar interfaces
+
+---
+
+# Riesgos
+
+Una mala gestión de dependencias puede causar:
+
+- sistemas rígidos
+- imposibilidad de escalar
+- cambios costosos
+- fallos en cascada
+- pérdida de modularidad
+
+---
+
+# Conclusiones
+
+La gestión de dependencias es uno de los pilares fundamentales del sistema SistematizArg.
+
+Permite mantener un sistema modular, escalable y evolucionable sin romper su coherencia interna.
+
+---
+
+# Referencias
+
+- Versioning Strategy
+- Architecture Decision Records
+- Event Bus Specification (futuro)
+- Kernel Specification (futuro)
+
+
+
+
+
+
+
+
 
 
 
