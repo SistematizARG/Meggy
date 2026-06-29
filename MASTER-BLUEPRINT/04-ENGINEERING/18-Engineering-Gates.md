@@ -1,22 +1,20 @@
 # Engineering Gates
 
-**Ubicación:** `04-ENGINEERING/18-Engineering-Gates.md`
+Ubicación: 04-ENGINEERING/18-Engineering-Gates.md
 
 ---
 
 # Estado
 
-**Estado:** Aprobado
+Estado: Aprobado
 
-**Versión:** 1.0
+Versión: 1.0
 
-**Última actualización:** Junio 2026
+Última actualización: Junio 2026
 
-**Responsable:** SistematizArg Engineering Team
+Responsable: SistematizArg Engineering Team
 
-**Última revisión:** Junio 2026
-
-**Próxima revisión:** Anual o cuando el proceso de desarrollo cambie significativamente.
+Última revisión: Anual o ante cambios estructurales del proceso de delivery
 
 ---
 
@@ -24,40 +22,48 @@
 
 ## Foundation
 
-* 00-FOUNDATION/03-Engineering-Principles.md
+- Engineering Principles
 
 ## Engineering
 
-* 00-Engineering-Handbook.md
-* 02-Development-Workflow.md
-* 16-Definition-of-Done.md
+- Development Workflow
+- Testing Strategy
+- Code Review Process
+- Versioning Strategy
+- Documentation Driven Development
+- Release Management
+- Technical Debt Management
 
 ---
 
 # Documentos relacionados
 
-* 05-Architecture-Decision-Records.md
-* 09-Testing-Strategy.md
-* 10-Code-Review-Process.md
-* 11-Documentation-Driven-Development.md
-* 12-Release-Management.md
-* 17-AI-Assisted-Development.md
+- Architecture Decision Records
+- System Runtime Model
+- Kernel Specification (conceptual)
+- Event Bus Specification (conceptual)
+- CI/CD Pipeline (futuro)
 
 ---
 
 # Resumen Ejecutivo
 
-Los Engineering Gates definen los puntos oficiales de control del ciclo de desarrollo.
+Los Engineering Gates definen el sistema formal de control de calidad y gobernanza del ciclo de desarrollo en SistematizArg.
 
-Cada Gate representa un conjunto de criterios obligatorios que deberán cumplirse antes de permitir que una funcionalidad avance a la siguiente etapa.
+Cada funcionalidad debe atravesar una serie de validaciones secuenciales antes de llegar a producción.
 
-Su objetivo es garantizar calidad, trazabilidad y coherencia durante todo el proceso de ingeniería.
+Este sistema garantiza:
+
+- calidad progresiva
+- trazabilidad completa
+- control arquitectónico
+- reducción de riesgo en producción
 
 ---
 
 # Objetivo
 
-Establecer un sistema uniforme de validación para todas las iniciativas de desarrollo dentro de SistematizArg.
+Establecer un flujo obligatorio de validación para cualquier cambio dentro del sistema SistematizArg.
 
 ---
 
@@ -65,288 +71,275 @@ Establecer un sistema uniforme de validación para todas las iniciativas de desa
 
 Aplica a:
 
-* nuevas funcionalidades;
-* correcciones;
-* refactorizaciones;
-* componentes de infraestructura;
-* módulos de IA;
-* servicios internos;
-* librerías compartidas.
+- nuevas funcionalidades
+- refactorizaciones
+- correcciones
+- módulos de IA (Hugi)
+- infraestructura
+- integraciones externas
+- cambios arquitectónicos
 
 ---
 
 # Principios
 
-## Ninguna etapa se omite
+## Secuencialidad obligatoria
 
-Toda funcionalidad deberá atravesar los Gates definidos en este documento.
-
----
-
-## La aprobación es objetiva
-
-Cada Gate posee criterios verificables.
-
-No dependerá únicamente del criterio individual de un desarrollador.
+Ningún Gate puede ser omitido sin excepción formal.
 
 ---
 
-## La calidad es progresiva
+## Validación progresiva
 
-Cada Gate reduce el riesgo antes de avanzar hacia producción.
+Cada Gate reduce el nivel de riesgo antes de avanzar.
+
+---
+
+## Trazabilidad total
+
+Cada Gate debe registrar evidencia verificable.
+
+---
+
+## Aprobación basada en criterios
+
+La aprobación no es subjetiva, es verificable.
 
 ---
 
 # Flujo General
 
-```text
+```text id="flow001"
 Idea
- │
- ▼
+ ↓
 Gate 0
- │
- ▼
+ ↓
 Gate 1
- │
- ▼
+ ↓
 Gate 2
- │
- ▼
+ ↓
 Gate 3
- │
- ▼
+ ↓
 Gate 4
- │
- ▼
+ ↓
 Gate 5
- │
- ▼
+ ↓
 Gate 6
- │
- ▼
+ ↓
 Operación
-```
 
----
 
-# Gate 0 — Blueprint Approval
-
-## Objetivo
+Gates del sistema
+Gate 0 — Blueprint Approval
+Objetivo
 
 Validar que el problema y la solución estén correctamente definidos.
 
-## Criterios
+Criterios
+problema identificado
+alcance definido
+alineación con Foundation
+alineación con Product Vision
+Blueprint actualizado
+Resultado
+
+Autoriza diseño técnico.
+
+Gate 1 — Technical Design Approval
+Objetivo
+
+Validar la arquitectura de la solución.
+
+Criterios
+arquitectura definida
+eventos identificados
+modelos de datos definidos
+interfaces documentadas
+riesgos identificados
+ADR creado si aplica
+Resultado
+
+Autoriza implementación.
+
+Gate 2 — Implementation Complete
+Objetivo
+
+Validar implementación funcional.
+
+Criterios
+código compilable
+estándares cumplidos
+sin errores críticos
+tests básicos implementados
+documentación inicial creada
+Resultado
+
+Autoriza testing.
+
+Gate 3 — Quality Validation
+Objetivo
+
+Validar comportamiento del sistema.
+
+Criterios
+tests unitarios
+tests de integración
+tests de seguridad (si aplica)
+tests de performance (si aplica)
+sin regresiones
+Resultado
+
+Autoriza review técnico.
 
-* necesidad identificada;
-* alcance definido;
-* Blueprint actualizado;
-* alineación con Foundation;
-* alineación con Product Vision.
+Gate 4 — Engineering Review
+Objetivo
 
-## Resultado
+Validar calidad arquitectónica.
 
-Se autoriza el diseño técnico.
+Criterios
+Code Review aprobado
+arquitectura respetada
+deuda técnica registrada
+documentación actualizada
+consistencia con ADRs
+Resultado
 
----
+Autoriza integración.
 
-# Gate 1 — Technical Design Approval
+Gate 5 — Release Approval
+Objetivo
 
-## Objetivo
+Autorizar despliegue.
 
-Validar la solución técnica.
+Criterios
+CI/CD pipeline exitoso
+artefactos generados
+versión asignada
+plan de rollback definido
+monitoreo preparado
+Resultado
 
-## Criterios
+Autoriza release a producción.
 
-* arquitectura definida;
-* interfaces documentadas;
-* eventos identificados;
-* modelos de datos definidos;
-* riesgos conocidos;
-* ADR creado cuando corresponda.
+Gate 6 — Operational Validation
+Objetivo
 
-## Resultado
+Validar estabilidad en producción.
 
-Se autoriza la implementación.
+Criterios
+métricas dentro de rango
+logs sin errores críticos
+alertas controladas
+rendimiento esperado
+comportamiento estable del sistema
+Resultado
 
----
+Funcionalidad declarada operativa.
 
-# Gate 2 — Implementation Complete
+Ownership de Gates
+Gate	Responsable
+Gate 0	Product + Architecture
+Gate 1	Architecture
+Gate 2	Development
+Gate 3	QA / Automation
+Gate 4	Tech Lead
+Gate 5	DevOps
+Gate 6	Operations
+Participación de Hugi (AI Kernel Actor)
 
-## Objetivo
+Hugi puede:
 
-Confirmar que la implementación está completa.
+analizar documentación previa a Gates
+detectar inconsistencias arquitectónicas
+generar sugerencias de mejora
+asistir en validación de riesgos
+simular impacto de cambios
 
-## Criterios
+Hugi NO puede:
 
-* código compilable;
-* estándares respetados;
-* sin errores críticos;
-* cobertura mínima alcanzada;
-* documentación técnica inicial.
+aprobar Gates
+autorizar releases
+reemplazar validación humana
+modificar estado del sistema
+Trazabilidad
 
-## Resultado
+Cada Gate debe registrar:
 
-Se autoriza el testing.
+timestamp
+responsable
+resultado
+evidencia
+observaciones
+links a PR / ADR / tests
 
----
+Todo Gate debe ser auditado posteriormente.
 
-# Gate 3 — Quality Validation
+Excepciones
+Regla general
 
-## Objetivo
+No se permite omitir Gates.
 
-Validar el comportamiento.
+Excepción controlada
 
-## Criterios
+Solo mediante:
 
-* pruebas unitarias;
-* integración;
-* seguridad;
-* rendimiento (cuando aplique);
-* regresión sin errores.
+ADR formal
+aprobación de liderazgo técnico
+justificación de impacto
+Integración con el sistema
+Kernel
 
-## Resultado
+El Kernel valida coherencia estructural entre Gates y estado del sistema.
 
-Se autoriza la revisión técnica.
+Event Bus
 
----
+Cada Gate genera eventos:
 
-# Gate 4 — Engineering Review
+GatePassed
+GateRejected
+GateEscalated
+GateBypassRequested
+Runtime Model
 
-## Objetivo
+Los Gates actúan como filtros previos al despliegue en runtime.
 
-Validar la calidad de ingeniería.
+Observability
 
-## Criterios
+El sistema debe exponer:
 
-* Code Review aprobado;
-* arquitectura respetada;
-* deuda técnica documentada;
-* documentación actualizada;
-* riesgos aceptados.
+estado de cada Gate
+tiempo de aprobación
+cuellos de botella
+fallos recurrentes
+Riesgos
 
-## Resultado
+Sin Engineering Gates:
 
-Se autoriza la integración.
+pérdida de control de calidad
+releases inconsistentes
+deuda técnica acelerada
+fallos en producción
+degradación arquitectónica
+Conclusiones
 
----
+Engineering Gates constituyen el sistema formal de gobernanza del ciclo de desarrollo en SistematizArg.
 
-# Gate 5 — Release Approval
+Son el mecanismo que asegura que toda funcionalidad pase por validación estructurada antes de afectar el sistema en producción.
 
-## Objetivo
+Referencias
+Testing Strategy
+Code Review Process
+Release Management
+Technical Debt Management
+Architecture Decision Records
 
-Autorizar el despliegue.
 
-## Criterios
 
-* pipeline exitoso;
-* artefactos generados;
-* versión asignada;
-* plan de rollback definido;
-* monitoreo preparado.
 
-## Resultado
 
-Se autoriza el despliegue.
 
----
 
-# Gate 6 — Operational Validation
 
-## Objetivo
 
-Confirmar estabilidad en producción.
 
-## Criterios
 
-* métricas normales;
-* logs sin errores críticos;
-* alertas controladas;
-* rendimiento esperado;
-* retroalimentación inicial analizada.
-
-## Resultado
-
-La funcionalidad se considera operativa.
-
----
-
-# Gate Ownership
-
-Cada Gate posee un responsable principal:
-
-| Gate   | Responsable            |
-| ------ | ---------------------- |
-| Gate 0 | Product + Arquitectura |
-| Gate 1 | Arquitectura           |
-| Gate 2 | Desarrollo             |
-| Gate 3 | QA                     |
-| Gate 4 | Tech Lead              |
-| Gate 5 | DevOps                 |
-| Gate 6 | Operaciones            |
-
----
-
-# Participación de Hugi
-
-Hugi puede asistir en:
-
-* revisión documental;
-* análisis de riesgos;
-* generación de pruebas;
-* detección de inconsistencias;
-* análisis post-release.
-
-Hugi no puede aprobar ningún Gate.
-
-La aprobación corresponde exclusivamente al proceso de gobernanza técnica.
-
----
-
-# Trazabilidad
-
-Cada Gate deberá registrar:
-
-* fecha;
-* responsable;
-* resultado;
-* observaciones;
-* evidencia.
-
-Toda aprobación deberá poder auditarse.
-
----
-
-# Excepciones
-
-Solo podrán omitirse Gates mediante una excepción documentada y aprobada por la dirección técnica.
-
-Las excepciones deberán quedar registradas mediante un ADR.
-
----
-
-# Riesgos
-
-Omitir los Gates puede provocar:
-
-* pérdida de calidad;
-* errores en producción;
-* arquitectura inconsistente;
-* deuda técnica;
-* ausencia de trazabilidad.
-
----
-
-# Conclusiones
-
-Los Engineering Gates constituyen el mecanismo oficial de control de calidad y gobernanza del desarrollo en SistematizArg.
-
-Su cumplimiento garantiza que toda funcionalidad avance de forma ordenada, verificable y alineada con la arquitectura del sistema.
-
----
-
-# Referencias
-
-* 04-ENGINEERING/
-* 05-ARCHITECTURE/
-* 06-DEVELOPMENT/
-* 08-SECURITY/
