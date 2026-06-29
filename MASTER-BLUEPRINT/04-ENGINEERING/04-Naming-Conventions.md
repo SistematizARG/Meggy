@@ -216,3 +216,166 @@ Los endpoints deben ser:
 - consistentes
 
 ✔ Ejemplo:
+POST /users/create
+GET /users/{id}
+DELETE /users/{id}
+
+
+---
+
+## Archivos
+
+Los nombres de archivo deben:
+
+- ser descriptivos
+- reflejar su responsabilidad
+- evitar redundancia
+
+✔ Ejemplo:
+- `user-service.ts`
+- `payment-controller.ts`
+- `event-bus.ts`
+
+---
+
+## Carpetas
+
+Las carpetas representan dominios funcionales.
+
+✔ Ejemplo:
+- `auth/`
+- `billing/`
+- `marketplace/`
+- `automation/`
+
+---
+
+# Reglas de dominio
+
+## Consistencia semántica
+
+Un mismo concepto debe mantener el mismo nombre en:
+
+- código
+- documentación
+- eventos
+- APIs
+- base de datos
+
+---
+
+## Evitar duplicación semántica
+
+No deben existir dos nombres diferentes para el mismo concepto.
+
+---
+
+# Eventos del sistema
+
+Los eventos deben seguir el patrón:
+<Subject><Action>
+
+✔ Ejemplos:
+- `UserRegistered`
+- `PaymentConfirmed`
+- `ModuleInstalled`
+
+---
+
+# Bases de datos
+
+## Tablas
+
+Singular, clara y en inglés.
+
+✔ Ejemplos:
+- `user`
+- `invoice`
+- `payment`
+
+---
+
+## Columnas
+
+camelCase consistente.
+
+✔ Ejemplo:
+- `createdAt`
+- `updatedAt`
+- `userId`
+
+---
+
+# Prohibiciones
+
+No se permite:
+
+- nombres genéricos (`data`, `item`, `value`)
+- abreviaciones no estándar
+- duplicación semántica
+- inconsistencia entre capas
+- nombres que describen implementación interna en lugar de intención
+
+---
+
+# Código generado por IA
+
+Todo código generado por IA deberá respetar estrictamente estas convenciones.
+
+Los nombres incorrectos se consideran defecto crítico en revisión.
+
+---
+
+# Criterios de cumplimiento
+
+Un sistema cumple estas convenciones cuando:
+
+- todos los nombres son consistentes;
+- no existen ambigüedades semánticas;
+- un nuevo desarrollador puede entender el sistema solo leyendo nombres.
+
+---
+
+# Riesgos
+
+El incumplimiento genera:
+
+- pérdida de legibilidad
+- aumento de deuda técnica
+- dificultad de mantenimiento
+- errores de interpretación
+- baja escalabilidad del sistema
+
+---
+
+# Conclusiones
+
+Las Naming Conventions son una parte fundamental del diseño del sistema.
+
+Un buen nombre reduce la necesidad de documentación adicional y mejora la comprensión global del sistema.
+
+---
+
+# Referencias
+
+- Coding Standards
+- Development Workflow
+- Event Bus Specification (futuro)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
